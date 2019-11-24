@@ -2,9 +2,9 @@ package dao
 
 import (
 	"database/sql"
-	omsApi "omsApi/pkg/utl/model"
+	"github.com/vickydk/gosk/domain/entity/model"
 )
 
 type PDB interface {
-	Find(*sql.DB, *omsApi.Pagination, *omsApi.FilterPermissionReq) (*[]omsApi.Permission, int, error)
+	Find(*sql.DB, *model.Pagination, *model.FilterPermissionReq) (*[]model.Permission, int, error)
 }

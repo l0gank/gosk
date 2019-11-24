@@ -8,6 +8,7 @@ type ConfigurationEnvironment struct {
 	DatabaseEnvironment
 	ServerEnvironment
 	JWTEnvironment
+	RedisEnvironment
 }
 
 type DatabaseEnvironment struct {
@@ -18,6 +19,11 @@ type DatabaseEnvironment struct {
 	DBUser      string `env:"DBUser"`
 	DBPass      string `env:"DBPass"`
 	DBHost      string `env:"DBHost"`
+}
+
+type RedisEnvironment struct {
+	RedisAddress  string `env:"REDIS_ADDRESS"`
+	RedisPassword string `env:"REDIS_PASSWORD"`
 }
 
 type ServerEnvironment struct {
